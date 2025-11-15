@@ -1,0 +1,82 @@
+/* Fondo general con azul suave */
+.nosotros-section {
+  padding: 60px 20px;
+  background: #e3f2fd; /* Celeste */
+}
+
+/* Contenedor */
+.nosotros-container {
+  max-width: 1120px;
+  margin: auto;
+}
+
+/* Título */
+.nosotros-header h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #0d47a1; /* Azul fuerte */
+}
+
+.nosotros-header p {
+  text-align: center;
+  margin-top: 8px;
+  font-size: 1.1rem;
+  color: #1565c0; /* Azul medio */
+}
+
+/* Contenido */
+.nosotros-content {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+/* Imagen */
+.nosotros-img img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+/* Texto */
+.nosotros-text h3 {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #0d47a1;
+}
+
+.nosotros-text p {
+  font-size: 1rem;
+  margin-top: 12px;
+  line-height: 1.6;
+  color: #0b3954;
+}
+
+/* Animación suave */
+.nosotros-content {
+  opacity: 0;
+  transform: translateY(25px);
+  animation: fadeInUp 0.7s forwards ease-out;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .nosotros-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nosotros-img img {
+    max-width: 300px;
+  }
+}

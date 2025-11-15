@@ -1,0 +1,86 @@
+<app-navbar></app-navbar>
+<section class="register-section">
+
+  <div class="register-card">
+
+    <h2 class="register-title">Crear Cuenta</h2>
+    <p class="register-subtitle">Regístrate para comenzar</p>
+
+    <form [formGroup]="form" (ngSubmit)="submit()">
+
+
+      <!-- NOMBRE -->
+      <div class="input-group">
+        <label>Nombre Completo</label>
+        <input type="text" formControlName="nombre" placeholder="Tu nombre">
+
+        <small *ngIf="form.get('nombre')?.touched && form.get('nombre')?.invalid" class="error">
+          El nombre debe tener mínimo 3 caracteres.
+        </small>
+      </div>
+
+
+      <!-- EMAIL -->
+      <div class="input-group">
+        <label>Correo Electrónico</label>
+        <input type="email" formControlName="email" placeholder="example@mail.com">
+
+        <small *ngIf="form.get('email')?.touched && form.get('email')?.invalid" class="error">
+          Ingresa un correo válido.
+        </small>
+      </div>
+
+
+      <!-- PASSWORD -->
+      <div class="input-group">
+        <label>Contraseña</label>
+
+        <div class="password-wrapper">
+          <input 
+            [type]="showPass ? 'text' : 'password'"
+            formControlName="password"
+            placeholder="••••••••">
+          <button type="button" class="toggle-password" (click)="showPass = !showPass">👁️</button>
+        </div>
+
+        <small *ngIf="form.get('password')?.touched && form.get('password')?.invalid" class="error">
+          La contraseña debe tener mínimo 6 caracteres.
+        </small>
+      </div>
+
+
+      <!-- CONFIRMAR PASSWORD -->
+      <div class="input-group">
+        <label>Confirmar Contraseña</label>
+
+        <div class="password-wrapper">
+          <input 
+            [type]="showPass2 ? 'text' : 'password'"
+            formControlName="password2"
+            placeholder="••••••••">
+          <button type="button" class="toggle-password" (click)="showPass2 = !showPass2">👁️</button>
+        </div>
+
+        <small *ngIf="form.get('password2')?.touched && form.get('password2')?.hasError('noIguales')" class="error">
+          Las contraseñas no coinciden.
+        </small>
+      </div>
+
+
+      <!-- BOTÓN -->
+      <button class="btn-register-main" [disabled]="form.invalid">
+        Registrarme
+      </button>
+
+      <!-- YA TIENES CUENTA -->
+      <div class="login-box">
+        <p>¿Ya tienes cuenta?</p>
+        <button class="btn-login-link" routerLink="/login">Iniciar Sesión</button>
+      </div>
+
+    </form>
+
+  </div>
+
+</section>
+<app-footer></app-footer>

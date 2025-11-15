@@ -1,1 +1,55 @@
-<p>metodos-pago works!</p>
+<app-navbar></app-navbar>
+<section class="payment-section">
+    <div class="payment-container">
+
+        <div class="payment-header">
+            <h2>Métodos de Pago Disponibles</h2>
+            <p>En Mimir PetShop te ofrecemos múltiples opciones seguras y rápidas para que realices tus compras sin
+                complicaciones.</p>
+        </div>
+
+        <!-- GRID -->
+        <div class="payment-grid">
+
+            <!-- Tarjeta -->
+            <div class="payment-card">
+                <div class="icon">💳</div>
+                <h3>Tarjeta de Crédito / Débito</h3>
+                <p>Aceptamos Visa, MasterCard y American Express. Tus pagos son procesados de manera 100% segura.</p>
+            </div>
+
+            <!-- Transferencia -->
+            <div class="payment-card">
+                <div class="icon">🏦</div>
+                <h3>Transferencia Bancaria</h3>
+                <p>Puedes realizar pagos mediante transferencia bancaria directa a nuestras cuentas oficiales.</p>
+            </div>
+
+            <!-- PayPal -->
+            <div class="payment-card">
+                <div class="icon">🟦</div>
+                <h3>PayPal</h3>
+                <p>Una de las plataformas más confiables del mundo para compras en línea.</p>
+            </div>
+
+            <!-- Contra entrega -->
+            <div class="payment-card">
+                <div class="icon">📦</div>
+                <h3>Pago Contra Entrega</h3>
+                <p>Realiza tu pago al momento de recibir tu pedido. Disponible para zonas seleccionadas.</p>
+            </div>
+
+        </div>
+
+        <!-- Mensaje Final -->
+        <div class="payment-info">
+            <p>Queremos que tu experiencia sea fácil y segura. Si tienes dudas sobre un método de pago, contáctanos y
+                con gusto te ayudamos.</p>
+
+            <a routerLink="/contactos" class="btn-contactanos">Contáctanos</a>
+        </div>
+
+    </div>
+</section>
+
+<app-footer></app-footer>

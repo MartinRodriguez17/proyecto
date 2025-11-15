@@ -1,6 +1,5 @@
-/* SECCIÓN */
-.login-section {
-    height: 100vh;
+.register-section {
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -8,34 +7,30 @@
     padding: 20px;
 }
 
-/* TARJETA */
-.login-card {
+.register-card {
     background: #fff;
     width: 100%;
-    max-width: 420px;
+    max-width: 450px;
     padding: 35px 30px;
     border-radius: 16px;
     border-top: 6px solid #6EC6FF;
     box-shadow: 0 6px 20px rgba(0,0,0,0.10);
 }
 
-/* TITULOS */
-.login-title {
+.register-title {
     text-align: center;
     font-size: 2rem;
     font-weight: 700;
     color: #0267C1;
-    margin-bottom: 5px;
 }
 
-.login-subtitle {
+.register-subtitle {
     text-align: center;
     font-size: 1rem;
     color: #444;
     margin-bottom: 25px;
 }
 
-/* INPUTS */
 .input-group {
     margin-bottom: 18px;
 }
@@ -53,7 +48,7 @@
     border-radius: 8px;
     border: 2px solid #6EC6FF;
     font-size: 1rem;
-    transition: border-color .2s ease, background .2s ease;
+    transition: border-color .2s, background .2s;
 }
 
 .input-group input:focus {
@@ -61,50 +56,59 @@
     background-color: #F0FAFF;
 }
 
-/* BOTÓN LOGIN */
-.btn-login {
+.password-wrapper {
+    position: relative;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 8px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+.error {
+    color: #D32F2F;
+    font-size: 0.85rem;
+}
+
+.btn-register-main {
     width: 100%;
     padding: 12px;
     background: #0267C1;
     color: #fff;
     border: none;
     border-radius: 10px;
-    margin-top: 5px;
     font-size: 1.1rem;
     cursor: pointer;
+    margin-top: 10px;
     transition: .2s ease;
 }
 
-.btn-login:hover {
-    background: #0081D5;
-    transform: translateY(-2px);
+.btn-register-main:disabled {
+    background: #8AB5D6;
+    cursor: not-allowed;
 }
 
-/* CAJA REGISTRO */
-.register-box {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.register-box p {
-    font-size: 0.95rem;
-    color: #444;
-    margin-bottom: 10px;
-}
-
-/* BOTÓN REGISTRAR */
-.btn-register {
+.btn-login-link {
     background: #6EC6FF;
     color: #024F8B;
-    border: none;
     padding: 10px 20px;
     border-radius: 8px;
-    font-size: 1rem;
+    margin-top: 10px;
+    border: none;
     cursor: pointer;
-    transition: 0.2s ease;
 }
 
-.btn-register:hover {
+.btn-login-link:hover {
     background: #0288D1;
     color: #fff;
+}
+
+.login-box {
+    text-align: center;
+    margin-top: 20px;
 }

@@ -1,0 +1,138 @@
+/* ===========================
+   CONTACTO – CONTENEDOR GENERAL
+   =========================== */
+.contact-section {
+    padding: 60px 0;
+    background-color: #E8F7FF; /* celeste muy suave */
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #0267C1; /* azul fuerte */
+}
+
+.section-subtitle {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 40px;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+/* ===========================
+   TARJETAS DE CONTACTO
+   =========================== */
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.contact-card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    border-left: 6px solid #6EC6FF; /* celeste */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+}
+
+.contact-card h3 {
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+    color: #0267C1; /* azul fuerte */
+}
+
+.contact-card p {
+    color: #444;
+    font-size: 0.95rem;
+}
+
+/* ===========================
+   MAPA
+   =========================== */
+.contact-map {
+    margin: 40px 0;
+}
+
+.contact-map h3 {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #0267C1; /* azul */
+}
+
+iframe {
+    border-radius: 12px;
+    border: 3px solid #6EC6FF;
+}
+
+/* ===========================
+   FORMULARIO DE CONTACTO
+   =========================== */
+.contact-form {
+    margin-top: 40px;
+}
+
+.contact-form h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.6rem;
+    color: #0267C1;
+}
+
+.contact-form form {
+    max-width: 700px;
+    margin: 0 auto;
+    display: grid;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 2px solid #6EC6FF;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color .2s ease, background .2s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #0267C1; /* azul fuerte */
+    background-color: #F0FAFF;
+    outline: none;
+}
+
+.contact-form textarea {
+    height: 140px;
+    resize: vertical;
+}
+
+/* BOTÓN ENVIAR */
+.btn-enviar {
+    padding: 12px;
+    border: none;
+    background-color: #0267C1;
+    color: white;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color .2s ease, transform .2s ease;
+}
+
+.btn-enviar:hover {
+    background-color: #0081D5;
+    transform: translateY(-2px);
+}
